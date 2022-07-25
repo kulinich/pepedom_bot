@@ -1,0 +1,6 @@
+.idea/
+.vscode
+*.user
+*.code-workspace
+*.sublime*
+__pycache__
