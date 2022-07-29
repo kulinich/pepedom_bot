@@ -22,24 +22,25 @@ def get_text_messages( message ):
         process_pepe_messeges( message )
 
 def process_pepe_messeges( message ):
-    if message.text.lower() in data.pp_uk_info:
+    msg_lower = message.text.lower()
+    if msg_lower in data.pp_uk_info:
         bot.reply_to( message, data.pp_uk_info_answer )
-    elif message.text.lower() in data.pp_mail:
+    elif msg_lower in data.pp_mail:
         bot.reply_to( message, data.pp_mail_answer )
         bot.send_location( message.chat.id, data.pp_mail_lat, data.pp_mail_long )
-    elif message.text.lower() in data.pp_health:
+    elif msg_lower in data.pp_health:
         bot.reply_to( message, data.pp_health_answer )
         bot.send_location( message.chat.id, data.pp_health_lat, data.pp_health_long )
-    elif message.text.lower() in data.pp_health_kids:
+    elif msg_lower in data.pp_health_kids:
         bot.reply_to( message, data.pp_health_kids_answer )
-    elif message.text.lower() in data.pp_passport:
+    elif msg_lower in data.pp_passport:
         bot.reply_to( message, data.pp_passport_answer )
         bot.send_location( message.chat.id, data.pp_passport_lat, data.pp_passport_long )
-    elif message.text.lower() in data.pp_emergency:
+    elif msg_lower in data.pp_emergency:
         bot.reply_to( message, data.pp_emergency_answer )
-    elif message.text.lower() in data.pp_police:
+    elif msg_lower in data.pp_police:
         bot.reply_to( message, data.pp_police_answer )
-    elif message.text.lower() in data.pp_kvd:
+    elif msg_lower in data.pp_kvd:
         bot.reply_to( message, data.pp_kvd_answer )
         bot.send_location( message.chat.id, data.pp_kvd_lat, data.pp_kvd_long )
 
